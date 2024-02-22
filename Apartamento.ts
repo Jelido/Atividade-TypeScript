@@ -52,8 +52,9 @@ export default class Apartamento {
     public getMoradoresMenoresIdade(): Morador[] {
         const dataAtual = new Date()
         return this.moradores.filter(morador => {
-            const idade = dataAtual.getFullYear() - morador.getDataNascimento().getFullYear();
+            const idade = dataAtual.getFullYear() - morador.getDataNascimento().getFullYear()
+            console.log(`Idade de ${morador.getNome()}: ${idade}`)
             return idade < 18
-        })
+        });
     }
 }
