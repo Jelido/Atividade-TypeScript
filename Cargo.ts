@@ -1,17 +1,25 @@
-export default class Cargo{
+export default class Cargo {
     private descricao: string
-    private horarioDeTrabalho: number
+    private cargaHoraria: number
 
-    constructor(descricao: string, horarioDeTrabalho: number){
+    constructor(descricao: string, cargaHoraria: number) {
         this.descricao = descricao
-        this.horarioDeTrabalho = horarioDeTrabalho
+        this.cargaHoraria = cargaHoraria
     }
 
-    getDescricao(): string {
+    public getDescricao(): string {
         return this.descricao
     }
 
-    getHorarioDeTrabalho(): number {
-        return this.horarioDeTrabalho
+    public setDescricao(descricao: string): void {
+        this.descricao = descricao
+    }
+
+    public getCargaHoraria(): number {
+        return this.cargaHoraria
+    }
+
+    public setCargaHoraria(cargaHoraria: number): void {
+        this.cargaHoraria = cargaHoraria
     }
 }
